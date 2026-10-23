@@ -1,0 +1,244 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF0DF;
+    color: #3D3028;
+    padding: 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #C6530A;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #704B32;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+main {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #E8B48B;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(100, 55, 20, 0.15);
+}
+
+fieldset {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #E8B48B;
+    border-radius: 8px;
+    background-color: #FFFAF5;
+}
+
+/* Improvement 1: Gradient headings help users identify form sections. */
+legend {
+    background: linear-gradient(135deg, #E87522, #C6530A);
+    color: #FFFFFF;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    max-width: 100%;
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #70401F;
+    margin-bottom: 5px;
+}
+
+.required-field::after {
+    content: " *";
+    color: #C0392B;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border: 1px solid #D6BCA8;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #3D3028;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #927D6C;
+}
+
+/* Improvement 2: The orange focus effect makes the active field easy to see. */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #E87522;
+    border-color: #C6530A;
+    box-shadow: 0 0 5px rgba(198, 83, 10, 0.25);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin: 5px 6px 8px 0;
+    accent-color: #C6530A;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#submit-btn {
+    background: linear-gradient(135deg, #E87522, #C6530A);
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 4px 10px rgba(198, 83, 10, 0.2);
+}
+
+#submit-btn:hover {
+    background: linear-gradient(135deg, #C6530A, #923B05);
+    transform: translateY(-2px);
+}
+
+#submit-btn:focus {
+    outline: 3px solid #F3A66F;
+    outline-offset: 3px;
+}
+
+#clear-btn {
+    background-color: #FFFFFF;
+    color: #C6530A;
+    border: 1px solid #C6530A;
+}
+
+#clear-btn:hover {
+    background-color: #FFF0DF;
+    color: #923B05;
+    transform: translateY(-2px);
+}
+
+#clear-btn:focus {
+    outline: 3px solid #F3A66F;
+    outline-offset: 3px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #704B32;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    form {
+        width: 100%;
+        padding: 18px 12px;
+        margin: 15px auto;
+    }
+
+    fieldset {
+        padding: 12px 10px;
+        margin-bottom: 12px;
+    }
+
+    legend {
+        font-size: 15px;
+        padding: 7px 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="url"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        flex: auto;
+    }
+
+    footer {
+        overflow-wrap: anywhere;
+        margin-bottom: 10px;
+    }
+}

@@ -4,6 +4,7 @@
 
 <head>
     <title>Student Admission Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,23 +21,23 @@
             <fieldset>
                 <legend><b>Personal Information</b></legend>
 
-                <label for="fullname">Full Name:</label>
+                <label for="fullname" class="required-field">Full Name:</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" minlength="3" required>
-                <br><br>
+                <br>
 
-                <label for="email">Email Address:</label>
+                <label for="email" class="required-field">Email Address:</label>
                 <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-                <br><br>
+                <br>
 
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="03XXXXXXXXX" pattern="03[0-9]{9}" title="Enter an 11-digit Pakistani mobile number starting with 03">
-                <br><br>
+                <br>
 
-                <label for="age">Age:</label>
+                <label for="age" class="required-field">Age:</label>
                 <input type="number" id="age" name="age" placeholder="Enter your age" min="16" max="60" required>
-                <br><br>
+                <br>
 
-                <label for="city">City:</label>
+                <label for="city" class="required-field">City:</label>
                 <select id="city" name="city" required>
                     <option value="">--Select your city--</option>
                     <option value="Islamabad">Islamabad</option>
@@ -48,42 +49,40 @@
 
             </fieldset>
 
-            <br>
+            
 
             <fieldset>
                 <legend><b>Course Selection</b></legend>
 
-                <label for="course">Choose Your Course:</label>
+                <label for="course" class="required-field">Choose Your Course:</label>
                 <select id="course" name="course" required>
                     <option value="">--Select a course--</option>
                     <option value="Web Development">Web Development</option>
                     <option value="Graphic Design">Graphic Design</option>
                     <option value="Digital Marketing">Digital Marketing</option>
                     <option value="Artificial Intelligence">Artificial Intelligence</option>
-                     <option value="Cyber Security">Cyber Security</option>
+                    <option value="Cyber Security">Cyber Security</option>
                 </select>
 
             </fieldset>
 
-            <br>
+            
 
             <fieldset>
                 <legend><b>Preferred Class Shift</b></legend>
 
                 <input type="radio" id="morning" name="shift" value="Morning" required>
                 <label for="morning">Morning</label><br>
-                
 
                 <input type="radio" id="evening" name="shift" value="Evening">
                 <label for="evening">Evening</label><br>
-                
 
                 <input type="radio" id="weekend" name="shift" value="Weekend">
                 <label for="weekend">Weekend</label><br>
 
             </fieldset>
 
-            <br>
+            
 
             <fieldset>
                 <legend><b>Existing Skills</b></legend>
@@ -102,47 +101,57 @@
 
                 <input type="checkbox" id="python" name="skills" value="Python">
                 <label for="python">Python</label>
+                <br>
+
+                <input type="checkbox" id="java" name="skills" value="Java">
+                <label for="java">Java</label>
 
             </fieldset>
 
-            <br>
+            
 
             <fieldset>
                 <legend><b>Motivation</b></legend>
 
-                <label for="motivation">Why do you want to join this course?</label><br>
-                <textarea id="motivation" name="motivation" placeholder="Write your reason here" minlength="10" maxlength="200" required></textarea>
+                <label for="motivation" class="required-field">Why do you want to join this course?</label><br>
+                <textarea id="motivation" name="motivation" placeholder="Write your reason here..." minlength="10" maxlength="200" required></textarea>
 
             </fieldset>
 
-            <br>
+            
 
             <fieldset>
-                <legend><b>Additional Information</b> </legend>
+                <legend><b>Additional Information</b></legend>
 
                 <label for="portfolio">Portfolio Website URL:</label>
                 <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
-                <br><br>
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" pattern="03[0-9]{9}" title="Enter an 11-digit Pakistani mobile number starting with 03">
-                <br><br>
+                <br>
+
+                <label for="additional-phone">Phone Number:</label>
+                <input type="tel" id="additional-phone" name="additional-phone" placeholder="Enter phone number" pattern="03[0-9]{9}" title="Enter an 11-digit Pakistani mobile number starting with 03">
+                <br>
 
                 <label for="startdate">Preferred Starting Date:</label>
                 <input type="date" id="startdate" name="startdate">
-                
+
             </fieldset>
 
-            <br>
+            
 
-            <button type="submit">Submit Application</button>
-            <button type="reset">Clear Form</button>
+            <div class="form-actions">
+                <button type="submit" id="submit-btn">Submit Application</button>
+                <button type="reset" id="clear-btn">Clear Form</button>
+            </div>
 
         </form>
 
     </main>
-<hr>
+
+    <hr>
+
     <footer>
         <p>Student Admission Form - Assignment 03</p>
+        <p>Student Name: Maria Bibi | Roll Number: 317448</p>
     </footer>
 
 </body>
