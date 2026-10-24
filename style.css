@@ -42,6 +42,9 @@ form {
     border: 1px solid #E8B48B;
     border-radius: 15px;
     box-shadow: 0 5px 18px rgba(100, 55, 20, 0.15);
+    
+
+
 }
 
 fieldset {
@@ -50,9 +53,11 @@ fieldset {
     border: 1px solid #E8B48B;
     border-radius: 8px;
     background-color: #FFFAF5;
+     background: linear-gradient(to right, #FFFAF5, #FFF0DF);
+    border-left: 4px solid #E87522;
 }
 
-/* Improvement 1: Gradient headings help users identify form sections. */
+
 legend {
     background: linear-gradient(135deg, #E87522, #C6530A);
     color: #FFFFFF;
@@ -104,7 +109,7 @@ textarea::placeholder {
     color: #927D6C;
 }
 
-/* Improvement 2: The orange focus effect makes the active field easy to see. */
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -147,7 +152,11 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
+
 
 #submit-btn {
     background: linear-gradient(135deg, #E87522, #C6530A);
